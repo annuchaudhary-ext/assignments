@@ -1,6 +1,8 @@
 describe("Login App Test", function() {
+    const INDEX_URL = "file:///D://Nag%20Assignments/Login%20App%20test%20using%20Protractor/src/index.html";
+    const HOME_URL = "file:///D://Nag%20Assignments/Login%20App%20test%20using%20Protractor/src/home.html";
     it("When both email and password invalid credentials passed", function() {
-        browser.get("file:///D://Nag%20Assignments/Login%20App%20test%20using%20Protractor/src/index.html");
+        browser.get(INDEX_URL);
         var emailInp = element(by.name("email"));
         var passInp = element(by.name("password"));
         var submitBtn = element(by.id("loginSubmitBtn"));
@@ -17,7 +19,7 @@ describe("Login App Test", function() {
     });
 
     it("When invalid email credential passed", function() {
-        browser.get("file:///D://Nag%20Assignments/Login%20App%20test%20using%20Protractor/src/index.html");
+        browser.get(INDEX_URL);
         var emailInp = element(by.name("email"));
         var passInp = element(by.name("password"));
         var submitBtn = element(by.id("loginSubmitBtn"));
@@ -34,7 +36,7 @@ describe("Login App Test", function() {
     });
 
     it("When invalid password credential passed", function() {
-        browser.get("file:///D://Nag%20Assignments/Login%20App%20test%20using%20Protractor/src/index.html");
+        browser.get(INDEX_URL);
         var emailInp = element(by.name("email"));
         var passInp = element(by.name("password"));
         var submitBtn = element(by.id("loginSubmitBtn"));
@@ -51,7 +53,7 @@ describe("Login App Test", function() {
     });
 
     it("When incorrect email password passed", function() {
-        browser.get("file:///D://Nag%20Assignments/Login%20App%20test%20using%20Protractor/src/index.html");
+        browser.get(INDEX_URL);
         var emailInp = element(by.name("email"));
         var passInp = element(by.name("password"));
         var submitBtn = element(by.id("loginSubmitBtn"));
@@ -69,7 +71,7 @@ describe("Login App Test", function() {
     });
 
     it("When correct email password passed", function() {
-        browser.get("file:///D://Nag%20Assignments/Login%20App%20test%20using%20Protractor/src/index.html");
+        browser.get(INDEX_URL);
         var emailInp = element(by.name("email"));
         var passInp = element(by.name("password"));
         var submitBtn = element(by.id("loginSubmitBtn"));
@@ -79,7 +81,7 @@ describe("Login App Test", function() {
 
         submitBtn.click();
 
-        expect(browser.getCurrentUrl()).toBe("file:///D://Nag%20Assignments/Login%20App%20test%20using%20Protractor/src/home.html");
+        expect(browser.getCurrentUrl()).toBe(HOME_URL);
         browser.sleep(2000);
         
     });
